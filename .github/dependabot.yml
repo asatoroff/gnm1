@@ -1,0 +1,14 @@
+version: 2
+updates:
+  - package-ecosystem: pub
+    directory: /
+    schedule:
+      interval: weekly
+    labels: ["type: technical", "area: devx-ci", "status: needs-triage"]
+    open-pull-requests-limit: 5
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    labels: ["type: technical", "area: devx-ci", "status: needs-triage"]
+    open-pull-requests-limit: 3

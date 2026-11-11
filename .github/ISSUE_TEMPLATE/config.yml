@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Product and architecture documentation
+    url: https://github.com/norbraet/flutter-template/tree/main/docs
+    about: Review project scope, architecture, domain model, and roadmap before opening an issue.
+  - name: Questions and support
+    url: https://github.com/norbraet/flutter-template/discussions
+    about: Ask usage and contributor questions without creating backlog work.

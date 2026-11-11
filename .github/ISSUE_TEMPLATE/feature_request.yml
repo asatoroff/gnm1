@@ -1,0 +1,49 @@
+name: Feature request
+description: Propose a user outcome that fits the project's product vision.
+title: "feat: "
+labels: ["type: feature", "status: needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: User problem
+      description: Who has this problem, during what workflow, and why does it matter?
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the outcome without prescribing an implementation.
+    validations:
+      required: true
+  - type: dropdown
+    id: audience
+    attributes:
+      label: Primary audience
+      options: [New user, Regular user, Contributor or maintainer, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: workflow
+    attributes:
+      label: Proposed workflow
+      description: Explain when the feature is used and how many interactions it adds or removes for the user.
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      placeholder: "- [ ] Given ..., when ..., then ..."
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: boundaries
+    attributes:
+      label: Product fit
+      options:
+        - label: This fits within the boundaries described in docs/vision.md.
+          required: true
+        - label: This does not require the app to become an authority it isn't meant to be.
+          required: true

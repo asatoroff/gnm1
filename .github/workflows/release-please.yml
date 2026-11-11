@@ -1,0 +1,27 @@
+name: release-please
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      # target-branch must stay pinned to main: release-please otherwise
+      # defaults to the repository's default branch, which is develop in
+      # this template's branching model, and main is the only branch this
+      # workflow should ever release from.
+      # A fine-grained PAT (repo secret RELEASE_PLEASE_TOKEN) is required, not
+      # the default GITHUB_TOKEN: GitHub never lets the default token's own
+      # actions trigger other workflows, so a bot-authored PR would sit with
+      # its required status checks (CI, PR title) permanently pending. A
+      # real-user-authored PR triggers them normally. See README.md.
+      - uses: googleapis/release-please-action@v4
+        with:
+          token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
+          target-branch: main

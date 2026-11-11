@@ -1,0 +1,53 @@
+pre-commit:
+  parallel: true
+  commands:
+    formatting:
+      glob: "*.dart"
+      run: mise exec -- dart format --output=none --set-exit-if-changed {staged_files}
+      fail_text: '❌ Dart formatting issues found. Run "mise run format" and commit again.'
+      skip_empty: true
+
+    forbidden-branches:
+      run: bash scripts/forbidden-branch.sh commit
+
+    analysis:
+      glob: "*.dart"
+      run: mise run analyze
+      fail_text: '❌ Flutter analysis found issues. Fix them and commit again.'
+      skip_empty: true
+
+commit-msg:
+  commands:
+    conventional:
+      run: bash scripts/validate-commit-message.sh "{1}"
+
+pre-push:
+  commands:
+    forbidden-branches:
+      run: bash scripts/forbidden-branch.sh push
+
+    analysis:
+      run: mise run analyze
+      fail_text: '❌ Flutter analysis failed. Fix the reported issues and try again.'
+
+    test:
+      run: mise run test
+      fail_text: '❌ Tests failed. Fix the reported issues and try again.'
+
+post-checkout:
+  commands:
+    flutter-pub-get:
+      run: mise run dependencies
+
+post-merge:
+  commands:
+    flutter-pub-get:
+      files: git diff --name-only ORIG_HEAD HEAD
+      glob: "{pubspec.yaml,pubspec.lock}"
+      run: mise run dependencies
+
+skip_output:
+  - meta
+  - success
+
+colors: true

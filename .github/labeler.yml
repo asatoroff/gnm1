@@ -1,0 +1,21 @@
+"type: docs":
+  - changed-files:
+      - any-glob-to-any-file: ["docs/**", "**/*.md"]
+"area: domain":
+  - changed-files:
+      - any-glob-to-any-file: ["lib/**/domain/**", "test/**/domain/**"]
+"area: persistence":
+  - changed-files:
+      - any-glob-to-any-file: ["lib/**/data/**", "lib/**/database/**", "test/**/data/**"]
+"area: ui-design":
+  - changed-files:
+      - any-glob-to-any-file: ["lib/design/**", "lib/**/presentation/**"]
+"area: android":
+  - changed-files:
+      - any-glob-to-any-file: ["android/**"]
+"area: ios":
+  - changed-files:
+      - any-glob-to-any-file: ["ios/**"]
+"area: devx-ci":
+  - changed-files:
+      - any-glob-to-any-file: [".github/**", "mise.toml", "lefthook.yml", "analysis_options.yaml"]

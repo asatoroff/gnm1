@@ -1,0 +1,47 @@
+name: Technical task or spike
+description: Define engineering, architecture, research, or maintenance work.
+title: "chore: "
+labels: ["type: technical", "status: needs-triage"]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Work type
+      options: [Implementation task, Technical spike, Refactor, Dependency or tooling, Documentation or ADR]
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and objective
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: In scope
+      placeholder: "- ..."
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: Out of scope
+      placeholder: "- ..."
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Done when
+      placeholder: "- [ ] ..."
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks, dependencies, and open questions
+  - type: checkboxes
+    id: decisions
+    attributes:
+      label: Decision record
+      options:
+        - label: This work changes a durable architectural decision and needs an ADR update.

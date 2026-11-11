@@ -1,0 +1,20 @@
+title: Flutter Template Delivery
+description: Product and engineering delivery for a Flutter project built from this template.
+readme: |
+  This project tracks roadmap outcomes from discovery through release. New items enter Inbox,
+  are clarified against the product vision, prioritized, assigned to a milestone, and only then
+  move to Ready. Keep work small enough to review and attach measurable acceptance criteria.
+fields:
+  delivery_status: [Inbox, Ready, In progress, In review, Done]
+  priority: [Critical, High, Medium, Low]
+  effort: [XS, S, M, L, XL]
+  area: [Domain, Persistence, UI & design, Accessibility, Android, iOS, DX & CI]
+workflows:
+  - New issues and pull requests enter Inbox.
+  - Closed issues and merged pull requests move to Done.
+  - Reopened items return to Inbox.
+views:
+  - { name: Roadmap, layout: roadmap, group_by: milestone }
+  - { name: Delivery board, layout: board, group_by: delivery_status }
+  - { name: Priorities, layout: table, group_by: priority }
+  - { name: Backlog, layout: table, filter: "delivery_status:Inbox" }

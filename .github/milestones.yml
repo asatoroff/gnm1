@@ -1,0 +1,13 @@
+milestones:
+  - title: "M1.0 Discovery & Prototype"
+    description: "Validate core workflows, screen flow, domain model, and an early prototype. Exit: scope and interaction assumptions are evidence-backed."
+  - title: "M1.1 Technical Foundation"
+    description: "Flutter architecture, CI, design tokens, and persistence setup. Exit: both platforms launch, state survives restart, and tests run in CI."
+  - title: "M1.2 Core Feature"
+    description: "The project's first vertical slice of real functionality. Exit: defined per project, see docs/roadmap.md."
+  - title: "M1.3 Release Readiness"
+    description: "Accessibility, performance, offline/recovery, privacy, migrations, store assets, and beta validation. Exit: initial release criteria are met."
+  - title: "M2.0 Next Major Direction"
+    description: "The next major capability planned beyond the initial release; scope this once Version 1 validates the need."
+  - title: "Future backlog (unordered)"
+    description: "Validated opportunities beyond the currently planned scope; not a delivery commitment."

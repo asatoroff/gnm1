@@ -1,0 +1,26 @@
+# Canonical label taxonomy. Apply with scripts/bootstrap-github.sh.
+labels:
+  - { name: "status: needs-triage", color: "D4C5F9", description: "Awaiting initial review and classification" }
+  - { name: "status: ready", color: "0E8A16", description: "Clear, accepted, and ready to be picked up" }
+  - { name: "status: blocked", color: "B60205", description: "Cannot proceed until a dependency or decision is resolved" }
+  - { name: "status: in-progress", color: "1D76DB", description: "Actively being implemented" }
+  - { name: "status: needs-info", color: "FBCA04", description: "More information is required" }
+  - { name: "type: bug", color: "D73A4A", description: "Something is not working as intended" }
+  - { name: "type: feature", color: "A2EEEF", description: "New or expanded user-facing behavior" }
+  - { name: "type: technical", color: "5319E7", description: "Engineering, architecture, or infrastructure work" }
+  - { name: "type: docs", color: "0075CA", description: "Documentation-only work" }
+  - { name: "type: research", color: "C5DEF5", description: "Discovery, validation, or technical spike" }
+  - { name: "priority: critical", color: "B60205", description: "Immediate action; release, security, or data-loss risk" }
+  - { name: "priority: high", color: "D93F0B", description: "Important and time-sensitive" }
+  - { name: "priority: medium", color: "FBCA04", description: "Normal planned priority" }
+  - { name: "priority: low", color: "C2E0C6", description: "Useful but safely deferrable" }
+  - { name: "area: domain", color: "7057FF", description: "Domain rules, policies, reducers, undo, or recovery" }
+  - { name: "area: persistence", color: "0052CC", description: "Local storage, snapshots, events, or migrations" }
+  - { name: "area: ui-design", color: "D876E3", description: "UI, design system, interaction, animation, or layout" }
+  - { name: "area: accessibility", color: "008672", description: "Semantics, contrast, text scaling, motion, or input access" }
+  - { name: "area: android", color: "3DDC84", description: "Android-specific work" }
+  - { name: "area: ios", color: "A9A9A9", description: "iOS-specific work" }
+  - { name: "area: devx-ci", color: "2D333B", description: "Developer experience, automation, build, or CI" }
+  - { name: "good first issue", color: "7057FF", description: "Well-scoped work suitable for a new contributor" }
+  - { name: "help wanted", color: "008672", description: "Maintainers welcome community help" }
+  - { name: "breaking-change", color: "B60205", description: "Requires migration or compatibility planning" }

@@ -1,0 +1,57 @@
+name: Bug report
+description: Report reproducible behavior that is incorrect or degraded.
+title: "fix: "
+labels: ["type: bug", "status: needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve this project. Do not include sensitive or personal data unless it is necessary and anonymized.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and what you expected instead.
+      placeholder: "Actual: ...\nExpected: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      placeholder: "1. Open...\n2. Do...\n3. ..."
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options: [Android, iOS, Both, Not platform-specific]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: App version or commit
+      placeholder: "v0.1.0 or commit SHA"
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Logs and supporting material
+      description: Add sanitized logs, screenshots, or recordings. Remove personal data.
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impact
+      options:
+        - label: User data was lost or corrupted
+        - label: The app crashed or became unusable
+        - label: This blocks a release or core workflow
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched for an existing issue.
+          required: true
+        - label: I removed or anonymized any sensitive or personal data.
+          required: true
