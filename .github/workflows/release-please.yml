@@ -21,7 +21,7 @@ jobs:
       # actions trigger other workflows, so a bot-authored PR would sit with
       # its required status checks (CI, PR title) permanently pending. A
       # real-user-authored PR triggers them normally. See README.md.
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@v5
         with:
           token: ${{ secrets.RELEASE_PLEASE_TOKEN }}
           target-branch: main
